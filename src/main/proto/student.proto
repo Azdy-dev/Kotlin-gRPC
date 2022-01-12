@@ -1,0 +1,20 @@
+syntax = "proto3";
+option java_multiple_files = true;
+
+package me.test.grpc.student;
+
+service StudentService{
+  rpc getStudent(StudentRequest) returns (StudentResponse);
+}
+
+message StudentRequest {
+  int32 id = 2;
+}
+
+message StudentResponse {
+  int32 id = 1;
+  string name = 2;
+  int32 age = 3;
+
+}
+
